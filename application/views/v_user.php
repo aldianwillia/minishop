@@ -1,3 +1,4 @@
+<!-- /.Tampil Data User -->
 <div class="col-md-12">
     <div class="card card-primary">
         <div class="card-header">
@@ -45,10 +46,18 @@
                                                     } else {
                                                         echo '<span class="badge bg-success">User</span>';
                                                     }
-                                                    ?></td>
+                                                    ?>
+                            </td>
                             <td class="text-center">
-                                <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#edit<?= $value->id_user ?>"><i class=" fas fa-edit"></i></button>
-                                <button class="btn btn-danger btn-sm"><i class=" fas fa-trash"></i></button>
+
+                                <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#edit<?= $value->id_user ?>">
+                                    <i class=" fas fa-edit"></i>
+                                </button>
+
+                                <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete<?= $value->id_user ?>">
+                                    <i class=" fas fa-trash"></i>
+                                </button>
+
                             </td>
                         </tr>
 
@@ -169,6 +178,37 @@
                 <?php
                 echo form_close();
                 ?>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+<?php } ?>
+<!-- /.modal -->
+
+
+<!-- /.Modal Delete -->
+<?php foreach ($user as $key => $value) { ?>
+    <div class="modal fade" id="delete<?= $value->id_user ?>">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Delete <?= $value->nama_user ?></h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                   
+                    <h4>Apakah anda yakin ingin menghapus <?= $value->nama_user ?> dari data user...?</h4>
+                    
+
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <a href="<?= base_url('user/delete/' . $value->id_user)?>" class="btn btn-primary">Delete</a>
+                </div>
             </div>
             <!-- /.modal-content -->
         </div>

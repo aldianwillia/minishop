@@ -1,13 +1,60 @@
-<div class="col-lg-12">
-    <div class="card card-primary card-outline">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+<div class="col-lg-3 col-6">
+    <!-- small box -->
+    <div class="small-box bg-info">
+        <div class="inner">
+            <h3>150</h3>
 
-            <p class="card-text">
-                Some quick example text to build on the card title and make up the bulk of the card's
-                content.
-            </p>
+            <p>Total Order</p>
         </div>
+        <div class="icon">
+            <i class="fas fa-cart-plus"></i>
+        </div>
+        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+    </div>
+</div>
+
+<div class="col-lg-3 col-6">
+    <!-- small box -->
+    <div class="small-box bg-success">
+        <div class="inner">
+            <h3><?= $total_barang ?></h3>
+
+            <p>Total Barang</p>
+        </div>
+        <div class="icon">
+            <i class="fas fa-truck" ></i>
+        </div>
+        <a href="<?= base_url('barang') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+    </div>
+</div>
+
+<div class="col-lg-3 col-6">
+    <!-- small box -->
+    <div class="small-box bg-warning">
+        <div class="inner">
+            <h3>150</h3>
+
+            <p>Total Pelanggan</p>
+        </div>
+        <div class="icon">
+            <i class="fas fa-people-carry"></i>
+        </div>
+        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+    </div>
+</div>
+
+<div class="col-lg-3 col-6">
+    <!-- small box -->
+    <div class="small-box bg-danger">
+        <div class="inner">
+            <h3><?= $total_kategori ?></h3>
+
+            <p>Kategori</p>
+        </div>
+        <div class="icon">
+            <i class="fas fa-box"></i>
+        </div>
+        <a href="<?= base_url('kategori') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
     </div>
 </div>
 
