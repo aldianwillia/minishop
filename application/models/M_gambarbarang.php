@@ -4,6 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class M_gambarbarang extends CI_Model
 {
+    
     public function get_all_data()
     {
         $this->db->select('tbl_barang.*,COUNT(tbl_gambar.id_barang) as total_gambar');
